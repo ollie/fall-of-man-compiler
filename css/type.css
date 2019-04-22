@@ -60,7 +60,10 @@ small {
 }
 
 body {
+  box-sizing: border-box;
+  max-width: 650px;
   padding: 1rem;
+  margin: 0 auto;
 }
 
 .mt-0 {
