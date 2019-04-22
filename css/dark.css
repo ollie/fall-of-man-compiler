@@ -1,0 +1,16 @@
+html {
+  color: #f8f8f2;
+  background: #272822;
+}
+
+a {
+  color: #66d9ef;
+}
+
+a:visited {
+  color: #90908a;
+}
+
+a:active {
+  color: #a6e22e;
+}

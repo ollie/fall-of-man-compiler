@@ -1,0 +1,72 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font: 1rem/1.5rem Georgia, serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 2rem 0 1rem;
+  line-height: 1em;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+@media (min-width: 576px) {
+  h1 {
+    text-align: left;
+  }
+}
+
+.author {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+@media (min-width: 576px) {
+  .author {
+    text-align: left;
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+ul, ol {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+pre {
+  margin: 1rem 0;
+  padding: 0;
+  line-height: normal;
+  overflow: auto;
+}
+
+small {
+  font-size: 0.875rem;
+}
+
+body {
+  padding: 1rem;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
