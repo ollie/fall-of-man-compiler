@@ -23,12 +23,8 @@ html lang="en"
     ol
       - posts.each do |post|
         li
-          a> href="#chapter-#{post.fetch('number')}"
+          a href="#chapter-#{post.fetch('number')}"
             = post.fetch('title')
-          small
-            | (
-            a href=post.fetch('url') target="_blank" on Reddit
-            | )
 
     - posts.each do |post|
       h2.mb-0 id="chapter-#{post.fetch('number')}"
@@ -36,8 +32,14 @@ html lang="en"
       p.mt-0
         small
           | Posted on
-          =< post.fetch('created_at')
+          a< href=post.fetch('url') target="_blank"
+            = post.fetch('created_at')
           | , back to
           a< href="#toc" table of contents
           | .
       == post.fetch('body')
+
+    hr
+
+    p
+      | There might be a new post, check on <a href="https://www.reddit.com/r/ThePhenomenon/search?q=%22Fall%20of%20Man%22%20author%3AEmperor_Cartagia&restrict_sr=1&sort=new" target="_blank">Reddit</a>.

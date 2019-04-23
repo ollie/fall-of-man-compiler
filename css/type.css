@@ -59,6 +59,13 @@ small {
   font-size: 0.875rem;
 }
 
+hr {
+  margin: 2rem 0;
+  border: none;
+  height: 1px;
+  background: #ddd;
+}
+
 body {
   box-sizing: border-box;
   max-width: 650px;

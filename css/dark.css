@@ -14,3 +14,7 @@ a:visited {
 a:active {
   color: #a6e22e;
 }
+
+hr {
+  background-color: #666;
+}
