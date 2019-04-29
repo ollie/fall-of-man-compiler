@@ -80,7 +80,7 @@ def fetch_posts
     listing  = data.fetch('data')
 
     listing.fetch('children').each do |post|
-      unless post.fetch('data').fetch('title') =~ /Fall of Man \d+:/i
+      unless post.fetch('data').fetch('title').match?(/Fall of Man \d+:/i)
         puts "Ignoring #{post.fetch('data').fetch('title').inspect}"
         next
       end
