@@ -38,7 +38,7 @@ def access_token
           'User-Agent' => USER_AGENT
         },
         body: {
-          grant_type: 'password',
+          grant_type: 'client_credentials',
           username: config['username'],
           password: config['password']
         }
