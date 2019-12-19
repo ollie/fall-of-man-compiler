@@ -6,8 +6,8 @@ GEM
     ffi (1.11.3)
     multi_json (1.14.1)
     mustermann (1.0.3)
-    oj (3.9.2)
-    rack (2.0.7)
+    oj (3.10.0)
+    rack (2.0.8)
     rack-protection (2.0.7)
       rack
     sinatra (2.0.7)
