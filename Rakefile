@@ -18,3 +18,5 @@ task :server do
   require_relative 'server'
   Sinatra::Application.run!
 end
+
+task default: :recompile
