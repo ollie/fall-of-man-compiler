@@ -1,5 +1,5 @@
 require 'bundler'
-Bundler.require(:server)
+Bundler.require(:default, :server)
 
 require 'sinatra'
 

@@ -1,5 +1,5 @@
 require 'bundler'
-Bundler.require(:compiler)
+Bundler.require(:default, :compiler)
 
 require 'yaml'
 
@@ -84,7 +84,6 @@ def fetch_posts
         puts "Ignoring #{post.fetch('data').fetch('title').inspect}"
         next
       end
-
       data       = post.fetch('data')
       title      = data.fetch('title')
       created_at = Time.at(data.fetch('created_utc')).utc.strftime('%B %-d, %Y')
