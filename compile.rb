@@ -112,28 +112,48 @@ def fetch_posts
 end
 
 def download_posts
-  dir_path  = Pathname.new('data')
-  file_path = dir_path.join('posts.json')
+  dir_path = Pathname.new('data/fall-of-man')
+  file_paths = Pathname.glob('data/fall-of-man/*.json')
 
-  return if file_path.file?
+  return if file_paths.any?
 
   posts = fetch_posts
+
   dir_path.mkpath
-  file_path.write(MultiJson.dump(posts, pretty: true))
+
+  posts.each do |post|
+    file_name = post.fetch(:number).to_s.rjust(3, '0')
+    file_path = dir_path.join("#{file_name}.json")
+    file_path.write(MultiJson.dump(post, pretty: true))
+  end
 end
 
-def compile_posts
-  posts = MultiJson.load(File.read('data/posts.json'))
+def generate_index(posts, view:, file_name:, dark:)
   Slim::Engine.options[:pretty] = true
+  file_name << '.html' unless file_name.end_with?('.html')
+  html = Tilt.new("views/#{view}.slim").render(
+    nil,
+    posts: posts,
+    dark: dark
+  )
+  File.write(file_name, html)
+  puts "Generated #{file_name}"
+end
 
-  html = Tilt.new('views/light.slim').render(nil, posts: posts)
-  File.write('index.html', html)
-  puts 'Generated index.html'
+def compile_fall_of_man_posts
+  file_paths = Pathname.glob('data/fall-of-man/*.json').sort
+  posts = file_paths.map { |file_path| MultiJson.load(file_path.read) }
+  generate_index(posts, view: :fall_of_man, file_name: 'index', dark: false)
+  generate_index(posts, view: :fall_of_man, file_name: 'dark', dark: true)
+end
 
-  html = Tilt.new('views/dark.slim').render(nil, posts: posts)
-  File.write('dark.html', html)
-  puts 'Generated dark.html'
+def compile_the_phenomenon_posts
+  file_paths = Pathname.glob('data/the-phenomenon/*.json').sort
+  posts = file_paths.map { |file_path| MultiJson.load(file_path.read) }
+  generate_index(posts, view: :the_phenomenon, file_name: 'the-phenomenon', dark: false)
+  generate_index(posts, view: :the_phenomenon, file_name: 'the-phenomenon-dark', dark: true)
 end
 
 download_posts
-compile_posts
+compile_fall_of_man_posts
+compile_the_phenomenon_posts

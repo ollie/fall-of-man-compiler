@@ -7,23 +7,23 @@ Content belong the its owner (R.K. Katic) and the tool itself can be shared and 
 ## Development
 
 ```sh
-# To compile "index.html" page:
+# To compile HTML pages:
 $ rake compile
 
 # To view it on your machine:
 $ open index.html
 
-# To re-compile "index.html" page:
+# To re-compile HTML pages:
 $ rake recompile
 
 # To view it in an iPhone Simulator:
 $ rake server
 # And then open "http://127.0.0.1:4567/" in Simulator's browser.
 
-# To delete "data/posts.json":
+# To delete "data/posts/fall-of-man/":
 $ rake clean
 
-# To delete "data/posts.json" and "index.html":
+# To delete "data/fall-of-man/" and generated HTML pages:
 $ rake clobber
 ```
 

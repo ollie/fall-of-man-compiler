@@ -50,8 +50,10 @@ ul, ol {
 
 pre {
   margin: 1rem 0;
-  padding: 0;
-  line-height: normal;
+  padding: 1rem;
+  border: solid 1px #ddd;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
   overflow: auto;
 }
 

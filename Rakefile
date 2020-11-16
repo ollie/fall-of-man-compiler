@@ -1,7 +1,7 @@
 require 'rake/clean'
 
-CLEAN.include('data')
-CLOBBER.include('index.html')
+CLEAN.include('data/fall-of-man')
+CLOBBER.include('*.html')
 
 desc 'Compile an index.html'
 task :compile do

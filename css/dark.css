@@ -15,6 +15,10 @@ a:active {
   color: #a6e22e;
 }
 
+pre {
+  border-color: #666;
+}
+
 hr {
   background-color: #666;
 }
