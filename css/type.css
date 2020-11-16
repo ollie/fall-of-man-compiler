@@ -4,7 +4,7 @@ html, body {
 }
 
 html {
-  font: 1rem/1.5rem Georgia, serif;
+  font: 1.125rem/1.5rem Georgia, serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -52,7 +52,7 @@ pre {
   margin: 1rem 0;
   padding: 1rem;
   border: solid 1px #ddd;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.4rem;
   overflow: auto;
 }

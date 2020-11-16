@@ -128,11 +128,21 @@ def download_posts
   end
 end
 
+class Helpers
+  def version_asset(path)
+    file_path = Pathname.new(path)
+
+    return path unless file_path.file?
+
+    "#{path}?v=#{file_path.mtime.to_i}"
+  end
+end
+
 def generate_index(posts, view:, file_name:, dark:)
   Slim::Engine.options[:pretty] = true
   file_name << '.html' unless file_name.end_with?('.html')
   html = Tilt.new("views/#{view}.slim").render(
-    nil,
+    Helpers.new,
     posts: posts,
     dark: dark
   )
