@@ -48,11 +48,17 @@ ul, ol {
   margin-bottom: 1rem;
 }
 
+blockquote {
+  margin: 1rem 0;
+  padding-left: 1rem;
+  border-left: solid 0.33rem #ddd;
+}
+
 pre {
   margin: 1rem 0;
-  padding: 1rem;
+  padding: 0.5rem 0.8rem;
   border: solid 1px #ddd;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.4rem;
   overflow: auto;
 }
