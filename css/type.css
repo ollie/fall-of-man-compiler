@@ -52,6 +52,7 @@ blockquote {
   margin: 1rem 0;
   padding-left: 1rem;
   border-left: solid 0.33rem #ddd;
+  font-style: italic;
 }
 
 pre {
