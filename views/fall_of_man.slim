@@ -35,7 +35,7 @@ html lang="en"
     ol
       - posts.each do |post|
         li
-          a href="#chapter-#{post.fetch('number')}"
+          a id="toc-#{post.fetch('number')}" href="#chapter-#{post.fetch('number')}"
             = post.fetch('title')
 
     - posts.each do |post|
@@ -47,7 +47,7 @@ html lang="en"
           a< href=post.fetch('url') target="_blank"
             = post.fetch('created_at')
           | , back to
-          a< href="#toc" table of contents
+          a< href="#toc-#{post.fetch('number')}" TOC
           | .
       == post.fetch('body')
 
