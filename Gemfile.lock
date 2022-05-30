@@ -7,8 +7,8 @@ GEM
     multi_json (1.15.0)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
-    oj (3.13.11)
-    rack (2.2.3)
+    oj (3.13.13)
+    rack (2.2.3.1)
     rack-protection (2.2.0)
       rack
     ruby2_keywords (0.0.5)
@@ -36,4 +36,4 @@ DEPENDENCIES
   typhoeus
 
 BUNDLED WITH
-   2.2.32
+   2.2.33
