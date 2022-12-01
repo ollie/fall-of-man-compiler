@@ -1,27 +1,27 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    ethon (0.15.0)
+    ethon (0.16.0)
       ffi (>= 1.15.0)
     ffi (1.15.5)
     multi_json (1.15.0)
-    mustermann (1.1.1)
+    mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
-    oj (3.13.13)
-    rack (2.2.3.1)
-    rack-protection (2.2.0)
+    oj (3.13.23)
+    rack (2.2.4)
+    rack-protection (3.0.4)
       rack
     ruby2_keywords (0.0.5)
-    sinatra (2.2.0)
-      mustermann (~> 1.0)
-      rack (~> 2.2)
-      rack-protection (= 2.2.0)
+    sinatra (3.0.4)
+      mustermann (~> 3.0)
+      rack (~> 2.2, >= 2.2.4)
+      rack-protection (= 3.0.4)
       tilt (~> 2.0)
     slim (4.1.0)
       temple (>= 0.7.6, < 0.9)
       tilt (>= 2.0.6, < 2.1)
     temple (0.8.2)
-    tilt (2.0.10)
+    tilt (2.0.11)
     typhoeus (1.4.0)
       ethon (>= 0.9.0)
 
@@ -36,4 +36,4 @@ DEPENDENCIES
   typhoeus
 
 BUNDLED WITH
-   2.2.33
+   2.3.26
