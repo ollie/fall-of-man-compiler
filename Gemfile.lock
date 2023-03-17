@@ -7,8 +7,8 @@ GEM
     multi_json (1.15.0)
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
-    oj (3.13.23)
-    rack (2.2.6.2)
+    oj (3.14.2)
+    rack (2.2.6.4)
     rack-protection (3.0.5)
       rack
     ruby2_keywords (0.0.5)
@@ -17,11 +17,11 @@ GEM
       rack (~> 2.2, >= 2.2.4)
       rack-protection (= 3.0.5)
       tilt (~> 2.0)
-    slim (4.1.0)
-      temple (>= 0.7.6, < 0.9)
-      tilt (>= 2.0.6, < 2.1)
-    temple (0.8.2)
-    tilt (2.0.11)
+    slim (5.1.0)
+      temple (~> 0.10.0)
+      tilt (>= 2.0.6, < 2.2)
+    temple (0.10.0)
+    tilt (2.1.0)
     typhoeus (1.4.0)
       ethon (>= 0.9.0)
 
@@ -36,4 +36,4 @@ DEPENDENCIES
   typhoeus
 
 BUNDLED WITH
-   2.3.26
+   2.4.7
